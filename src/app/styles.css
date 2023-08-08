@@ -1,0 +1,4 @@
+.header__link {
+  @apply hover:underline underline-offset-2 decoration-primary;
+  text-decoration-thickness: 0.1em;
+}
