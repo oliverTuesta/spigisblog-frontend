@@ -4,7 +4,7 @@ import Header from '../components/Header';
 export default function Home() {
   return (
     <>
-      <h1>niggas</h1>
+      <h1 className="">niggas</h1>
     </>
   );
 }
