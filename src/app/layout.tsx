@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="transition-colors duration-150">
         <Providers>
           <Header />
-          {children}
+          <div className="container max-w-screen-lg px-4 py-8">{children}</div>
         </Providers>
       </body>
     </html>
