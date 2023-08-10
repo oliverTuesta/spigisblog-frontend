@@ -9,6 +9,6 @@
 
 .divider {
   width: 100%;
-  height: 0.1em;
+  height: 0.05em;
   @apply bg-gray-600;
 }
