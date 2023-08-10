@@ -1,5 +1,6 @@
 import type { ReactElement } from 'react';
-import Image from 'next/image';
+import NextImage from 'next/image';
+import NextLink from 'next/link';
 
 export interface PostSummaryProps {}
 
@@ -9,7 +10,7 @@ export default function PostSummary(props: PostSummaryProps): ReactElement {
       <div className="divider"></div>
       <div className="container flex gap-4 py-3">
         <div className="">
-          <Image
+          <NextImage
             className="rounded object-cover h-40 w-40"
             alt="todo"
             src="/images/post.png"
@@ -26,7 +27,10 @@ export default function PostSummary(props: PostSummaryProps): ReactElement {
             <p className="">#test #test #test</p>
             <div>
               <p className="">
-                July 28, 2023 <span className="font-bold">SPIGI</span>
+                July 28, 2023{' '}
+                <NextLink href="/profile" className="font-bold">
+                  SPIGI
+                </NextLink>
               </p>
             </div>
           </div>

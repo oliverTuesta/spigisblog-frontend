@@ -14,7 +14,6 @@ export default function PostsCard(props: PostsCardProps): ReactElement {
         <PostSummary />
         <PostSummary />
         <PostSummary />
-        <PostSummary />
       </Card>
     </>
   );

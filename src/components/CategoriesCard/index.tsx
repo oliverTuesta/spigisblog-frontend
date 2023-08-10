@@ -7,7 +7,7 @@ export interface CategoryCardProps {}
 export default function CategoriesCard(props: CategoryCardProps): ReactElement {
   return (
     <>
-      <Card className="bg-transparent">
+      <Card className="bg-transparent shadow-none">
         <CardHeader>
           <h3 className="font-bold text-2xl">Categories</h3>
         </CardHeader>

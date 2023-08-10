@@ -2,6 +2,7 @@
 
 import type { ReactElement } from 'react';
 import ThemeToggler from './ThemeToggler';
+import NextLink from 'next/link';
 
 export default function Header(): ReactElement {
   return (
@@ -16,14 +17,14 @@ export default function Header(): ReactElement {
           <nav>
             <ul className="flex justify-between items-center space-x-4 ">
               <li>
-                <a className="header__link" href="/">
+                <NextLink className="header__link" href="/">
                   About
-                </a>
+                </NextLink>
               </li>
               <li>
-                <a className="header__link" href="/">
+                <NextLink className="header__link" href="/">
                   Posts
-                </a>
+                </NextLink>
               </li>
             </ul>
           </nav>
