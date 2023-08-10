@@ -7,7 +7,7 @@ import HashtagsCard from '@/components/HashtagsCard';
 export default function Home() {
   return (
     <>
-      <section className="flex gap-2 lg:gap-4">
+      <section className="flex gap-2 lg:gap-20">
         <div className="flex-1 lg:my-8">
           <h1 className="text-2xl sm:2xl md:text-6xl sm:text-5xl font-extrabold leading-tight tracking-normal">
             Lorem maiores eos numquam ipsam repudiandae?
@@ -19,9 +19,9 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="flex-1 bg-primary container hero__shape h-min my-auto">
+        <div className="flex-1 bg-primary container hero__shape my-auto">
           <Image
-            className="hero__image"
+            className="hero__image w-full"
             alt="anime girl holding an ipad"
             src="/images/ipad.png"
             width={500}
@@ -29,7 +29,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <div className="relative bottom-5 flex flex-row-reverse gap-8">
+      <div className="relative bottom-5 lg:bottom-10 flex flex-row-reverse gap-8">
         <div className="basis-1/3">
           <CategoriesCard />
           <HashtagsCard />
