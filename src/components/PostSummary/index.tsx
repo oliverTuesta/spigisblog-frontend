@@ -27,7 +27,7 @@ export default function PostSummary(props: PostSummaryProps): ReactElement {
             <p className="">#test #test #test</p>
             <div>
               <p className="">
-                July 28, 2023{' '}
+                July 28, 2023
                 <NextLink href="/profile" className="font-bold">
                   SPIGI
                 </NextLink>

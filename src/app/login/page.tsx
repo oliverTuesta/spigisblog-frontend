@@ -24,7 +24,7 @@ export default function Login(props: LoginProps): ReactElement {
             </Button>
           </CardContent>
         </Card>
-      </div>{' '}
+      </div>
     </>
   );
 }
