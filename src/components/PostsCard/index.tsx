@@ -4,10 +4,10 @@ import PostSummary from '../PostSummary';
 
 export interface PostsCardProps {}
 
-export default function PostsCard(props: PostsCardProps): ReactElement {
+export default function PostsCard({ className = '' }): ReactElement {
   return (
     <>
-      <Card>
+      <Card className={className}>
         <CardHeader>
           <CardTitle>Popular</CardTitle>
         </CardHeader>

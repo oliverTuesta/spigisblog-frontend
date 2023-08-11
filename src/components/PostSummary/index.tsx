@@ -18,12 +18,12 @@ export default function PostSummary(props: PostSummaryProps): ReactElement {
             height={500}
           />
         </div>
-        <div className="flex flex-col justify-between">
+        <div className="w-3/4 flex flex-col justify-between text-card-foreground">
           <div>
-            <h3 className="text-2xl font-semibold text-primary">Post Title</h3>
+            <h3 className="text-2xl font-semibold dark:text-primary">Post Title</h3>
             <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
           </div>
-          <div className="flex justify-between text-sm text-orange-400 dark:text-gray-400">
+          <div className="flex justify-between text-sm text-slate-500 dark:text-gray-400">
             <p className="">#test #test #test</p>
             <div>
               <p className="">
