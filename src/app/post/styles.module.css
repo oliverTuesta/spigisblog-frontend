@@ -1,0 +1,39 @@
+.post h1 {
+  @apply text-3xl font-bold text-center;
+}
+
+.post h2 {
+  @apply text-2xl font-bold;
+}
+
+.post h3 {
+  @apply text-xl font-bold;
+}
+
+.post li {
+  @apply my-2 list-inside;
+}
+
+.post ul > li {
+  @apply list-disc;
+}
+
+.post ol > li {
+  @apply list-decimal;
+}
+
+.post a {
+  @apply underline;
+}
+
+.post blockquote {
+  @apply border-l-4 border-foreground dark:border-gray-700 pl-4 my-4;
+}
+
+.post code {
+  @apply bg-card text-card-foreground px-2 py-1 rounded-md font-mono shadow-sm my-2 block;
+}
+
+.post img {
+  @apply mx-auto my-4 max-h-96;
+}

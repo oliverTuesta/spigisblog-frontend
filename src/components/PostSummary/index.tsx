@@ -20,7 +20,9 @@ export default function PostSummary(props: PostSummaryProps): ReactElement {
         </div>
         <div className="w-3/4 flex flex-col justify-between text-card-foreground">
           <div>
-            <h3 className="text-2xl font-semibold dark:text-primary">Post Title</h3>
+            <NextLink href="/post">
+              <h3 className="text-2xl font-semibold dark:text-primary">Post Title</h3>
+            </NextLink>
             <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
           </div>
           <div className="flex justify-between text-sm text-slate-500 dark:text-gray-400">
