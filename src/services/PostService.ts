@@ -2,7 +2,6 @@ import axios from 'axios';
 import PostModel from '@/models/PostModel';
 
 const API_URL = process.env.NEXT_PUBLIC_API_BASE_URL + '/posts';
-console.log('API_URL', process.env.NEXT_PUBLIC_API_BASE_URL);
 
 export default class PostService {
   async getAllPosts(): Promise<PostModel[]> {

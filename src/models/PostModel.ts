@@ -16,7 +16,7 @@ export default class PostModel {
   views: number;
   user: UserModel;
   tags: TagModel[];
-  categories: CategoryModel[];
+  category: CategoryModel;
 
   constructor(
     id: number,
@@ -32,7 +32,7 @@ export default class PostModel {
     views: number,
     user: UserModel,
     tags: TagModel[],
-    categories: CategoryModel[]
+    category: CategoryModel
   ) {
     this.id = id;
     this.title = title;
@@ -47,6 +47,6 @@ export default class PostModel {
     this.views = views;
     this.user = user;
     this.tags = tags;
-    this.categories = categories;
+    this.category = category;
   }
 }
