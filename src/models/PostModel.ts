@@ -1,4 +1,9 @@
+import UserModel from './UserModel';
+import TagModel from './TagModel';
+import CategoryModel from './CategoryModel';
+
 export default class PostModel {
+  id: number;
   title: string;
   content: string;
   summary: string;
@@ -9,9 +14,12 @@ export default class PostModel {
   updateDate: Date;
   publishDate: Date;
   views: number;
-  userId: string;
+  user: UserModel;
+  tags: TagModel[];
+  categories: CategoryModel[];
 
   constructor(
+    id: number,
     title: string,
     content: string,
     summary: string,
@@ -22,8 +30,11 @@ export default class PostModel {
     updateDate: Date,
     publishDate: Date,
     views: number,
-    userId: string
+    user: UserModel,
+    tags: TagModel[],
+    categories: CategoryModel[]
   ) {
+    this.id = id;
     this.title = title;
     this.content = content;
     this.summary = summary;
@@ -34,6 +45,8 @@ export default class PostModel {
     this.updateDate = updateDate;
     this.publishDate = publishDate;
     this.views = views;
-    this.userId = userId;
+    this.user = user;
+    this.tags = tags;
+    this.categories = categories;
   }
 }
