@@ -8,7 +8,6 @@ export interface PostSummaryProps {
 }
 
 export default function PostSummary({ post }: PostSummaryProps): ReactElement {
-  console.log(post.category);
   return (
     <>
       <div className="divider"></div>
@@ -40,7 +39,7 @@ export default function PostSummary({ post }: PostSummaryProps): ReactElement {
           <div className="flex justify-between text-sm text-slate-500 dark:text-gray-400">
             <ol>
               {post.tags.map((tag) => (
-                <li key={tag.id}>{<NextLink href={`/tag/${tag.slug}`}>{`#${tag.name} `}</NextLink>}</li>
+                <li key={tag.id}>{<NextLink href={`/posts/tag/${tag.slug}`}>{`#${tag.name} `}</NextLink>}</li>
               ))}
             </ol>
             <div>

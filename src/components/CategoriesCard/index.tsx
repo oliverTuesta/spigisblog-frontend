@@ -1,10 +1,21 @@
+'use client';
+
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
-
 import type { ReactElement } from 'react';
+import CategoryService from '@/services/CategoryService';
+import CategoryModel from '@/models/CategoryModel';
+import NextLink from 'next/link';
+import { useEffect, useState } from 'react';
 
-export interface CategoryCardProps {}
+export default function CategoriesCard(): ReactElement {
+  const categoryService = new CategoryService();
+  const [categories, setCategories] = useState<CategoryModel[]>([]);
 
-export default function CategoriesCard(props: CategoryCardProps): ReactElement {
+  useEffect(() => {
+    categoryService.getAll().then((categories) => {
+      setCategories(categories);
+    });
+  }, []);
   return (
     <>
       <Card className="bg-transparent shadow-none">
@@ -13,24 +24,14 @@ export default function CategoriesCard(props: CategoryCardProps): ReactElement {
         </CardHeader>
         <CardContent>
           <ul>
-            <li>
-              <a href="#" className="font-bold">
-                Gaming
-              </a>
-              - Lorem ipsum dolor sit amet consectetur.
-            </li>
-            <li>
-              <a href="#" className="font-bold">
-                Web Development
-              </a>
-              - Lorem ipsum dolor sit amet consectetur.
-            </li>
-            <li>
-              <a href="#" className="font-bold">
-                Machine Learning
-              </a>
-              - Lorem ipsum dolor sit amet consectetur.
-            </li>
+            {categories.map((category) => (
+              <li key={category.id}>
+                <NextLink href={`/posts/category/${category.slug}`} className="font-bold">
+                  {category.name}:
+                </NextLink>{' '}
+                {category.description}
+              </li>
+            ))}
           </ul>
         </CardContent>
       </Card>

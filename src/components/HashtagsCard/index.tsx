@@ -1,11 +1,20 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
-
 import type { ReactElement } from 'react';
+import TagModel from '@/models/TagModel';
+import TagService from '@/services/TagService';
+import NextLink from 'next/link';
+import { useEffect, useState } from 'react';
 
-export interface CategoryCardProps {}
+export default function TagsCard(): ReactElement {
+  const [tags, setTags] = useState<TagModel[]>([]);
+  const tagService = new TagService();
 
-export default function CategoriesCard(props: CategoryCardProps): ReactElement {
+  useEffect(() => {
+    tagService.getAll().then((tags) => {
+      setTags(tags);
+    });
+  }, []);
+
   return (
     <>
       <Card className="bg-transparent shadow-none">
@@ -13,8 +22,11 @@ export default function CategoriesCard(props: CategoryCardProps): ReactElement {
           <h3 className="font-bold text-2xl">Hashtags</h3>
         </CardHeader>
         <CardContent>
-          #test #test #lorem Elit voluptas quasi quidem molestias qui? Nemo voluptatem quas dolores obcaecati obcaecati.
-          Quasi repudiandae nesciunt?
+          {tags.map((tag) => (
+            <NextLink key={tag.id} href={`/posts/tag/${tag.slug}`}>
+              #<span>{tag.name} </span>
+            </NextLink>
+          ))}
         </CardContent>
       </Card>
     </>

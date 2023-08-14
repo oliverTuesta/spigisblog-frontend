@@ -3,10 +3,10 @@ export default class UserModel {
   email: string;
   firstName: string;
   lastName: string;
-  profilePictureUrl: string | null;
-  profileBackgroundUrl: string | null;
-  profileDescription: string | null;
-  websiteUrl: string | null;
+  profilePictureUrl?: string;
+  profileBackgroundUrl?: string;
+  profileDescription?: string;
+  websiteUrl?: string;
   registrationDate: Date;
   lastLoginDate: Date;
 
@@ -15,10 +15,10 @@ export default class UserModel {
     email: string,
     firstName: string,
     lastName: string,
-    profilePictureUrl: string | null,
-    profileBackgroundUrl: string | null,
-    profileDescription: string | null,
-    websiteUrl: string | null,
+    profilePictureUrl: string,
+    profileBackgroundUrl: string,
+    profileDescription: string,
+    websiteUrl: string,
     registrationDate: Date,
     lastLoginDate: Date
   ) {
