@@ -30,7 +30,7 @@ export default function Home() {
           <HashtagsCard />
         </div>
         <div className="basis-2/3 flex flex-col gap-8">
-          <PostsCard posts={popularPosts} />
+          <PostsCard title="popular" posts={popularPosts} />
         </div>
       </div>
     </>

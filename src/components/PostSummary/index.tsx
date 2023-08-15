@@ -37,11 +37,13 @@ export default function PostSummary({ post }: PostSummaryProps): ReactElement {
             )}
           </div>
           <div className="flex justify-between text-sm text-slate-500 dark:text-gray-400">
-            <ol>
-              {post.tags.map((tag) => (
-                <li key={tag.id}>{<NextLink href={`/posts/tag/${tag.slug}`}>{`#${tag.name} `}</NextLink>}</li>
-              ))}
-            </ol>
+            {post.category && (
+              <ol>
+                {post.tags.map((tag) => (
+                  <li key={tag.id}>{<NextLink href={`/posts/tag/${tag.slug}`}>{`#${tag.name} `}</NextLink>}</li>
+                ))}
+              </ol>
+            )}
             <div>
               <p className="">
                 {new Date(post.publishDate).toLocaleDateString('en-US', {

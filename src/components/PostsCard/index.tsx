@@ -6,9 +6,10 @@ import PostModel from '@/models/PostModel';
 export interface PostsCardProps {
   className?: string;
   posts?: PostModel[];
+  title: string;
 }
 
-export default function PostsCard({ className, posts = [] }: PostsCardProps): ReactElement {
+export default function PostsCard({ className, posts = [], title }: PostsCardProps): ReactElement {
   if (posts.length === 0) {
     return <>No posts</>;
   }
@@ -16,7 +17,7 @@ export default function PostsCard({ className, posts = [] }: PostsCardProps): Re
     <>
       <Card className={`${className}`}>
         <CardHeader>
-          <CardTitle>Popular</CardTitle>
+          <CardTitle>{title}</CardTitle>
         </CardHeader>
         {posts.map((post) => (
           <PostSummary key={post.id} post={post} />

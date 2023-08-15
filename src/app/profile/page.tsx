@@ -35,9 +35,6 @@ export default function Profile(props: ProfileProps): ReactElement {
         <div className="my-10">
           <PostsCard />
         </div>
-        <div className="">
-          <PostsTitleCard />
-        </div>
       </div>
     </>
   );
