@@ -22,7 +22,7 @@ export default function Posts(props: PostsProps) {
     <>
       <h1 className="text-3xl lg:text-4xl text-center font-extrabold">Posts</h1>
       <section className="flex">
-        <div className="mx-auto  md:container">
+        <div className="mx-auto my-5  md:container">
           <DataTable columns={columns} data={posts} />
         </div>
       </section>
