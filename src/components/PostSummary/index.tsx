@@ -26,7 +26,7 @@ export default function PostSummary({ post }: PostSummaryProps): ReactElement {
         <div className="w-3/4 flex flex-col justify-between text-card-foreground">
           <div>
             <NextLink href={`/post/${post.slug}`}>
-              <h3 className="text-2xl font-semibold dark:text-primary mb-0">{post.title}</h3>
+              <h3 className="text-2xl font-semibold text-accent dark:text-primary mb-0">{post.title}</h3>
             </NextLink>
             <p className="">{post.summary}</p>
             {post.category && (
@@ -36,16 +36,18 @@ export default function PostSummary({ post }: PostSummaryProps): ReactElement {
               </NextLink>
             )}
           </div>
-          <div className="flex justify-between text-sm text-slate-500 dark:text-gray-400">
+          <div className="flex justify-between text-sm">
             {post.category && (
               <ol>
                 {post.tags.map((tag) => (
-                  <li key={tag.id}>{<NextLink href={`/posts/tag/${tag.slug}`}>{`#${tag.name} `}</NextLink>}</li>
+                  <li className="bg-primary text-background px-1 rounded" key={tag.id}>
+                    {<NextLink href={`/posts/tag/${tag.slug}`}>{`#${tag.name} `}</NextLink>}
+                  </li>
                 ))}
               </ol>
             )}
             <div>
-              <p className="">
+              <p className="text-muted-foreground">
                 {new Date(post.publishDate).toLocaleDateString('en-US', {
                   year: 'numeric',
                   month: 'long',

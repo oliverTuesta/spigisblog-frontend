@@ -33,7 +33,7 @@ export default function Profile(props: ProfileProps): ReactElement {
           </div>
         </div>
         <div className="my-10">
-          <PostsCard title="nigga" />
+          <PostsCard title="todo" />
         </div>
       </div>
     </>

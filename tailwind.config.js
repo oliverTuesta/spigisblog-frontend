@@ -38,8 +38,8 @@ module.exports = {
           foreground: 'var(--destructive-foreground)',
         },
         muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
+          DEFAULT: 'var(--muted)',
+          foreground: 'var(--muted-foreground)',
         },
         accent: {
           DEFAULT: 'var(--accent)',
@@ -51,7 +51,7 @@ module.exports = {
         },
         card: {
           DEFAULT: 'var(--card)',
-          foreground: 'hsl(var(--card-foreground))',
+          foreground: 'var(--card-foreground)',
         },
       },
       borderRadius: {
