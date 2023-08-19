@@ -47,8 +47,18 @@ export default class PostService {
     return response.data;
   }
 
+  async getPostsByCategorySlug(categorySlug: string): Promise<PostModel[]> {
+    const response = await axios.get(`${API_URL}/category/slug/${categorySlug}`);
+    return response.data;
+  }
+
   async getPostsByTag(tagId: number): Promise<PostModel[]> {
     const response = await axios.get(`${API_URL}/tag/${tagId}`);
+    return response.data;
+  }
+
+  async getPostsByTagSlug(tagSlug: string): Promise<PostModel[]> {
+    const response = await axios.get(`${API_URL}/tag/slug/${tagSlug}`);
     return response.data;
   }
 

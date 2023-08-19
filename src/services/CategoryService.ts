@@ -9,8 +9,13 @@ export default class CategoryService {
     return response.data;
   }
 
-  public async getCategoryById(categoryId: number): Promise<CategoryModel[]> {
+  public async getCategoryById(categoryId: number): Promise<CategoryModel> {
     const response = await axios.get(`${API_URL}/${categoryId}`);
+    return response.data;
+  }
+
+  public async getCategoryBySlug(categorySlug: string): Promise<CategoryModel> {
+    const response = await axios.get(`${API_URL}/slug/${categorySlug}`);
     return response.data;
   }
 

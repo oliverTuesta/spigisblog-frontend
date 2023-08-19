@@ -9,8 +9,13 @@ export default class TagService {
     return response.data;
   }
 
-  public async getTagById(tagId: number): Promise<TagModel[]> {
+  public async getTagById(tagId: number): Promise<TagModel> {
     const response = await axios.get(`${API_URL}/${tagId}`);
+    return response.data;
+  }
+
+  public async getTagBySlug(tagSlug: string): Promise<TagModel> {
+    const response = await axios.get(`${API_URL}/slug/${tagSlug}`);
     return response.data;
   }
 

@@ -17,7 +17,7 @@ export default function PostsCard({ className, posts = [], title }: PostsCardPro
     <>
       <Card className={`${className}`}>
         <CardHeader>
-          <CardTitle>{title}</CardTitle>
+          <CardTitle className="capitalize">{title}</CardTitle>
         </CardHeader>
         {posts.map((post) => (
           <PostSummary key={post.id} post={post} />

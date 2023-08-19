@@ -2,8 +2,8 @@
 
 import { SearchBar } from '@/components/SearchBar';
 import PostService from '@/services/PostService';
-import { Payment, columns } from './columns';
-import { DataTable } from './data-table';
+import { columns } from './columns';
+import { DataTable } from '../components/DataTable/data-table';
 import { useEffect, useState } from 'react';
 import PostModel from '@/models/PostModel';
 
