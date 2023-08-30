@@ -12,3 +12,7 @@
   height: 0.05em;
   @apply bg-gray-600;
 }
+
+.mail {
+  @apply underline text-primary;
+}

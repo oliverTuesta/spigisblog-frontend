@@ -23,7 +23,7 @@ export default function Header(): ReactElement {
                   </NextLink>
                 </li>
                 <li>
-                  <NextLink className="header__link" href="/profile">
+                  <NextLink className="header__link" href="/about">
                     About
                   </NextLink>
                 </li>
