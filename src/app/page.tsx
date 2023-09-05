@@ -13,11 +13,9 @@ import { useEffect, useState } from 'react';
 export default function Home() {
   const postService = new PostService();
 
-  const [popularPosts, setPopularPosts] = useState<PostModel[]>([]);
   const [recentPosts, setRecentPosts] = useState<PostModel[]>([]);
 
   useEffect(() => {
-    postService.getPopularPosts().then((posts) => setPopularPosts(posts));
     postService.getRecentPosts().then((posts) => setRecentPosts(posts));
   }, []);
 
@@ -30,7 +28,7 @@ export default function Home() {
           <HashtagsCard />
         </div>
         <div className="basis-2/3 flex flex-col gap-8">
-          <PostsCard title="popular" posts={popularPosts} />
+          <PostsCard title="recent" posts={recentPosts} />
         </div>
       </div>
     </>

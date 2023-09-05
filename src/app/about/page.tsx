@@ -42,7 +42,7 @@ export default function Profile(): ReactElement {
             I'm Spigi, a software engineer from Peru with a passion for art, gaming and reading. I'm still in
             university, so most of my time is spend there. I love drawing doodles on a daily basis and currently
             learning to paint with watercolors (actually the watercolors are in standby for now). In my free time I play
-            some AAA videogames and will probably be posting some reviews. Additionally, I love reading fantasy, light
+            some videogames and will probably be posting some reviews. Additionally, I love reading fantasy, light
             novels and have recently been into philosophy.
           </p>
           <br />

@@ -42,8 +42,8 @@
     --background: #1d1f2c;
     --foreground: #cfdae8;
 
-    --muted: 223 47% 11%;
-    --muted-foreground: 215.4 16.3% 56.9%;
+    --muted: #80929d;
+    --muted-foreground: #80929d;
 
     --accent: 216 34% 17%;
     --accent-foreground: 210 40% 98%;

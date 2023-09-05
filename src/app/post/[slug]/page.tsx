@@ -32,6 +32,17 @@ export default function Post({ params }: { params: { slug: string } }): ReactEle
       {postError && <NotFound />}
       {post && (
         <div className={styles.post}>
+          <h1 className="uppercase my-8">{post.title}</h1>
+          <div className="my-9">
+            <p className="text-muted-foreground">
+              {new Date(post.publishDate).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              })}
+            </p>
+            <hr className="text-muted" />
+          </div>
           <div className="mx-4">
             <Markdown>{postMarkdown}</Markdown>
           </div>
