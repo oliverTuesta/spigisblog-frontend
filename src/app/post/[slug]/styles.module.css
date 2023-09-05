@@ -1,5 +1,5 @@
 .post h1 {
-  @apply text-3xl font-bold text-center;
+  @apply text-3xl font-extrabold text-center underline decoration-primary;
 }
 
 .post h2 {

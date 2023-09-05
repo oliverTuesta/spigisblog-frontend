@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import PostService from '@/services/PostService';
 import NotFound from '@/app/not-found';
 import PostModel from '@/models/PostModel';
+import NextLink from 'next/link';
 
 export default function Post({ params }: { params: { slug: string } }): ReactElement {
   const [postMarkdown, setPostMarkdown] = useState('');
@@ -34,20 +35,25 @@ export default function Post({ params }: { params: { slug: string } }): ReactEle
         <div className={styles.post}>
           <h1 className="uppercase my-8">{post.title}</h1>
           <div className="my-9">
-            <p className="text-muted-foreground">
-              {new Date(post.publishDate).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })}
-            </p>
+            <div className="flex gap-3 text-muted-foreground">
+              <p>
+                {new Date(post.publishDate).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })}
+              </p>
+              <NextLink className="font-bold" href={`/posts/category/${post.category.slug}`}>
+                {post.category.name}
+              </NextLink>
+            </div>
             <hr className="text-muted" />
           </div>
           <div className="mx-4">
             <Markdown>{postMarkdown}</Markdown>
           </div>
         </div>
-      )}{' '}
+      )}
     </>
   );
 }

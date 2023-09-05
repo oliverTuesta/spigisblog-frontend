@@ -1,7 +1,5 @@
 'use client';
 
-import Image from 'next/image';
-import Header from '../components/Header';
 import PostsCard from '@/components/PostsCard';
 import CategoriesCard from '@/components/CategoriesCard';
 import HashtagsCard from '@/components/HashtagsCard';

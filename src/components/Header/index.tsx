@@ -8,13 +8,13 @@ export default function Header(): ReactElement {
   return (
     <>
       <header className="py-2 px-8 bg-opacity-50 dark:bg-opacity-10 bg-white">
-        <div className="flex justify-between items-center container max-w-screen-lg">
-          <div>
+        <div className="flex justify-between w-full items-center container max-w-screen-lg">
+          <div className="w-1/4">
             <NextLink href="/" className="text-xl text-primary font-extrabold tracking-tighter">
-              Spigi's blog
+              Spigis blog
             </NextLink>
           </div>
-          <div>
+          <div className="">
             <nav>
               <ul className="flex justify-between items-center space-x-4 ">
                 <li>
@@ -30,7 +30,8 @@ export default function Header(): ReactElement {
               </ul>
             </nav>
           </div>
-          <div>
+          <div className="w-1/4 flex justify-between">
+            <div></div>
             <ThemeToggler />
           </div>
         </div>
