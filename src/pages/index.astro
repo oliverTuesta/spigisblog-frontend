@@ -5,6 +5,49 @@ import Footer from '../components/Footer.astro';
 import PostList from '../components/PostList.astro';
 import PostCard from '../components/PostCard.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { Image } from 'astro:assets';
+
+const post3: Post = {
+  title: "New Post",
+  content: "This is the content of the new post.",
+  summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  thumbnail: "https://i.pinimg.com/originals/2b/4a/aa/2b4aaa84ec86f60009fdf45e64af4386.jpg",
+  slug: "new-post",
+  views: 0,
+  publishDate: new Date(),
+  createDate: new Date(),
+  updateDate: new Date(),
+  category: "category"
+};
+
+const post2: Post = {
+  title: "New Post",
+  content: "This is the content of the new post.",
+  summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  thumbnail: "https://m.media-amazon.com/images/M/MV5BZmUzMThjOTItZGY4ZS00ODcwLTliNTMtYjVkM2JmY2QxNmRhXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_FMjpg_UX1000_.jpg",
+  slug: "new-post",
+  views: 0,
+  publishDate: new Date(),
+  createDate: new Date(),
+  updateDate: new Date(),
+  category: "category"
+};
+
+const post: Post = {
+  title: "New Post",
+  content: "This is the content of the new post.",
+  summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  thumbnail: "https://media.newyorker.com/photos/5d0be56fe140839b70c68120/master/pass/Phillips-Neon-Genesis-Evangelion.jpg",
+  slug: "new-post",
+  views: 0,
+  publishDate: new Date(),
+  createDate: new Date(),
+  updateDate: new Date(),
+  category: "category"
+};
+
+const posts = [ post, post2, post3 ];
+
 ---
 
 <!doctype html>
@@ -19,20 +62,22 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         <div class="flex flex-row gap-0 ">
 
           <div class="basis-1/2">
-            <h1 class="title text-5xl leading-tight">Bonjour and welcome to my humble blog :)</h1>
+            <h1 class="text-5xl leading-tight text-left">Bonjour and welcome to my humble blog :)</h1>
             <p>In this little space of the internet I will be sharing my knowledge and points of view on various topics that I am passionate about</p>
           </div>
-          <div class="basis-1/2 polygon-shape px-5 bg-gray-400"></div>
+          <div class="basis-1/2 polygon-shape px-5 bg-gray-400">
+            <Image class="overflow-hidden" alt="anime girl holding an ipad" src="/images/home-hero.png" width={250} height={250}></Image>
+          </div>
         </div>
 
 
         <a href="/about" class="card-link my-14 mx-6">
 
-          <h5 class="card__title">Hi, I'm spigi</h5>
+          <h3 class="card__title">Hi, I'm spigi</h5>
           <p class="card__p">I'm a software engineer from Peru with a passion for art, gaming, books and of course technology.
 </p>
         </a>
-        <PostList/>
+        <PostList title="Recent posts" posts={posts}/>
       </main>
       <Footer />
   </body>

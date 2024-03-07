@@ -8,6 +8,7 @@ body {
 
 p {
   font-size: 18px;
+  margin-bottom: 10px;
 }
 
 main {
@@ -18,7 +19,31 @@ main {
 
 @layer components {
   .title {
-    @apply text-4xl font-bold my-5;
+    @apply font-bold tracking-tight;
+  }
+
+  h1 {
+    @apply text-3xl title mb-5 text-center;
+  }
+
+  h2 {
+    @apply text-2xl title mb-4;
+  }
+
+  h3 {
+    @apply text-xl title mb-3;
+  }
+
+  hr {
+    @apply block border border-gray-200 mb-4;
+  }
+
+  section {
+    @apply my-5;
+  }
+
+  button {
+    @apply bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded;
   }
 
   .card {
@@ -27,10 +52,6 @@ main {
 
   .card-link {
     @apply card hover:bg-gray-200;
-  }
-
-  .card__title {
-    @apply mb-2 text-2xl font-bold tracking-tight;
   }
 
   .card__p {
