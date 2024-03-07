@@ -2,49 +2,44 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import PostList from '../components/PostList.astro';
+import PostCard from '../components/PostCard.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+      <main>
+
+        <div class="flex flex-row gap-0 ">
+
+          <div class="basis-1/2">
+            <h1 class="title text-5xl leading-tight">Bonjour and welcome to my humble blog :)</h1>
+            <p>In this little space of the internet I will be sharing my knowledge and points of view on various topics that I am passionate about</p>
+          </div>
+          <div class="basis-1/2 polygon-shape px-5 bg-gray-400"></div>
+        </div>
+
+
+        <a href="/about" class="card-link my-14 mx-6">
+
+          <h5 class="card__title">Hi, I'm spigi</h5>
+          <p class="card__p">I'm a software engineer from Peru with a passion for art, gaming, books and of course technology.
+</p>
+        </a>
+        <PostList/>
+      </main>
+      <Footer />
+  </body>
 </html>
+
+<style>
+  .polygon-shape {
+    clip-path: polygon(4% 11%, 87% 0, 100% 54%, 70% 100%, 16% 94%, 0% 50%);
+  }
+</style>

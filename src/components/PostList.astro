@@ -1,0 +1,41 @@
+---
+import PostCard from '../components/PostCard.astro'
+import { Post } from '../models/post'
+
+const post2: Post = {
+  title: "New Post",
+  content: "This is the content of the new post.",
+  summary: "Summary of the new post.",
+  thumbnail: "https://m.media-amazon.com/images/M/MV5BZmUzMThjOTItZGY4ZS00ODcwLTliNTMtYjVkM2JmY2QxNmRhXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_FMjpg_UX1000_.jpg",
+  slug: "new-post",
+  views: 0,
+  publishDate: new Date(),
+  createDate: new Date(),
+  updateDate: new Date(),
+  category: "category"
+};
+
+const post: Post = {
+  title: "New Post",
+  content: "This is the content of the new post.",
+  summary: "Summary of the new post.",
+  thumbnail: "https://media.newyorker.com/photos/5d0be56fe140839b70c68120/master/pass/Phillips-Neon-Genesis-Evangelion.jpg",
+  slug: "new-post",
+  views: 0,
+  publishDate: new Date(),
+  createDate: new Date(),
+  updateDate: new Date(),
+  category: "category"
+};
+
+const posts = [post, post2]
+
+---
+
+<div class="flex flex-col gap-5">
+  {
+    posts.map((post) => (
+      <PostCard post={post} />
+    ))
+  }
+</div> 

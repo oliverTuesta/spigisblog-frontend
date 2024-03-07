@@ -1,0 +1,34 @@
+---
+import Post from '../models/Post';
+
+interface Props {
+  post: Post;
+}
+
+const { post } = Astro.props;
+
+import { Image } from 'astro:assets';
+---
+
+<div class="bg-transparent flex flex-row gap-5">
+  <div class="basis-1/3">
+    {
+    post.thumbnail && 
+    <a href=`/blog/${post.slug}`>
+      <Image class="object-cover rounded-md h-44" width={300} height={300} src={post.thumbnail} alt="" />
+    </a>
+    }
+  </div>
+  <div class="basis-2/3 flex flex-col justify-between">
+    <div class="flex flex-col">
+      <h3 class="card__title"><a href=`/blog/${post.slug}` class="link">{post.title}</a></h2>
+      <p>{post.summary}</p>
+    </div>
+    <div class="card__footer flex flex-row justify-between">  
+      <p >{post.publishDate.toLocaleDateString()}</p>
+      <a href=`/blog/${post.slug}` class="link">
+        <p class="font-semibold uppercase">{post.category}</p>
+      </a>
+    </div>
+  </div>
+</div>
