@@ -1,6 +1,11 @@
 ---
 import Layout from '../layouts/BlogPost.astro';
 import SocialLink from '../components/SocialLink.astro'
+import { FaGithubAlt, FaYoutube } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
+import { IoMailSharp } from "react-icons/io5";
+import { FaExternalLinkSquareAlt } from "react-icons/fa";
+import { Image } from 'astro:assets';
 ---
 
 <Layout
@@ -10,11 +15,64 @@ pubDate={new Date('March 07 2024')}
 heroImage="/images/about-hero.png"
 >
 
-<p>Spigi is a software engineering student from Peru with a passion for computers and art. He enjoys using his coding skills to solve problems and is always looking for ways to improve his abilities. When not in front of a computer, Oliver enjoys reading books, going to the gym, competitive programming, and drawing. He is driven and dedicated to his studies and is eager to put his skills to use in the field of software engineering.</p>
+
+<section class="my-10">
+  <div class="flex gap-5 ">
+    <div class="min-w-40 max-h-40 border-black border-4 rounded-full overflow-hidden">
+      <Image class="" alt="anime girl holding an ipad" src="/images/home-hero.png" width={120} height={120}></Image>
+    </div>
+    <div class="w-full">
+
+      <div>
+        <h3 class="mb-2">Spigi</h3>
+        <p>Developer and artist with big dreams</p>
+      </div>
+
+      <div class="flex gap-4 w-min my-5">  
+        <a href="https://olivertuesta-homepage.vercel.app/works" target="_blank">
+          <button class="flex items-center gap-2">
+            <FaExternalLinkSquareAlt/>
+            Portfolio
+          </button>
+        </a>
+        <a href="mailto:oliver.jtuesta@gmail.com">
+          <button class="flex items-center gap-2">
+            <IoMailSharp/>
+            Contact
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section>
-  <h2>Links</h2>
-  <SocialLink/> 
+  <p>Spigi is a software engineering from Peru with a passion for computers and art. He enjoys using his coding skills to solve problems and is always looking for ways to improve his abilities. When not in front of a computer, Oliver enjoys reading books, going to the gym, competitive programming, and drawing. He is driven and dedicated to his studies and is eager to put his skills to use in the field of software engineering.</p>
+</section>
+
+<section>
+  <h2>Social links</h2>
+  <div class="flex gap-5 mx-auto max-w-min">
+    <a href="https://www.github.com/oliverTuesta" target="_blank" class="flex items-center gap-1">
+      <span class="sr-only">Go to my GitHub repo</span>
+      <FaGithubAlt />
+      Github
+    </a>
+
+    <a href="https://www.twitter.com/@spigiis" target="_blank" class="flex items-center gap-1">
+      <span class="sr-only">Go to my twitter</span>
+      <FaXTwitter />
+      @spigiis
+    </a>
+
+    <a href="https://www.youtube.com/@spigiz" target="_blank" class="flex items-center gap-1">
+      <span class="sr-only">Go to my youtube chanel</span>
+      <FaYoutube />
+      @spigiz
+    </a>
+
+  </div>
+
 </section>
 
 
