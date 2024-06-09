@@ -3,50 +3,19 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import PostList from '../components/PostList.astro';
-import PostCard from '../components/PostCard.astro';
+import Post from '../models/Post';
+import { getCollection } from 'astro:content';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { Image } from 'astro:assets';
 
-const post3: Post = {
-  title: "New Post",
-  content: "This is the content of the new post.",
-  summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  thumbnail: "https://i.pinimg.com/originals/2b/4a/aa/2b4aaa84ec86f60009fdf45e64af4386.jpg",
-  slug: "new-post",
-  views: 0,
-  publishDate: new Date(),
-  createDate: new Date(),
-  updateDate: new Date(),
-  category: "category"
-};
 
-const post2: Post = {
-  title: "New Post",
-  content: "This is the content of the new post.",
-  summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  thumbnail: "https://m.media-amazon.com/images/M/MV5BZmUzMThjOTItZGY4ZS00ODcwLTliNTMtYjVkM2JmY2QxNmRhXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_FMjpg_UX1000_.jpg",
-  slug: "new-post",
-  views: 0,
-  publishDate: new Date(),
-  createDate: new Date(),
-  updateDate: new Date(),
-  category: "category"
-};
-
-const post: Post = {
-  title: "New Post",
-  content: "This is the content of the new post.",
-  summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  thumbnail: "https://media.newyorker.com/photos/5d0be56fe140839b70c68120/master/pass/Phillips-Neon-Genesis-Evangelion.jpg",
-  slug: "new-post",
-  views: 0,
-  publishDate: new Date(),
-  createDate: new Date(),
-  updateDate: new Date(),
-  category: "category"
-};
-
-const posts = [ post, post2, post3 ];
+const posts: Post[] = (await getCollection('blog')).sort(
+	(a, b) => a.data.publishDate.valueOf() - b.data.publishDate.valueOf()
+  ).map(obj => { return {
+    ...obj.data,
+    slug: obj.slug
+  }
+})
 
 ---
 
@@ -75,7 +44,7 @@ const posts = [ post, post2, post3 ];
 
           <h3 class="card__title">Hi, I'm spigi</h5>
           <p class="card__p">I'm a software engineer from Peru with a passion for art, gaming, books and of course technology.
-</p>
+          </p>
         </a>
         <PostList title="Recent posts" posts={posts}/>
       </main>
