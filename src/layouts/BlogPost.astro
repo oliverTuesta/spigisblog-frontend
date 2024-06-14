@@ -21,7 +21,7 @@ const { title, summary, publishDate, updatedDate, hero } = Astro.props;
       <main>
         <article>
           <div class="">
-            {hero && <Image class="h-72 object-cover" width="768px" height="288px" src={hero} alt="" />}
+            {hero && <Image class="h-72 object-cover" width={768} height={288} src={hero} alt="" />}
           </div>
           <h1 class="my-8">{title}</h1>
           <div class="prose">
