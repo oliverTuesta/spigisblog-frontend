@@ -4,7 +4,7 @@ slug: 'markdown-style-guide'
 thumbnail: '/blog-placeholder-1.jpg'
 hero: '/blog-placeholder-1.jpg'
 summary: 'Lorem ipsum dolor sit amet'
-publishDate: 'Jul 08 2022'
+pubDate: 'Jul 08 2022'
 updateDate: 'Jul 08 2022'
 category: 'dumb'
 ---

@@ -27,7 +27,7 @@ import { Image } from 'astro:assets';
     </div>
     <div class="flex flex-row justify-between card__footer">  
       <p>
-      <FormattedDate date={post.data.publishDate}/>
+      <FormattedDate date={post.data.pubDate}/>
       </p>
       <a href=`/blog/${post.slug}` class="link">
         <p class="font-semibold uppercase">{post.data.category}</p>

@@ -4,7 +4,7 @@ slug: 'first-post'
 summary: 'Lorem ipsum dolor sit amet'
 thumbnail: '/blog-placeholder-3.jpg'
 hero: '/blog-placeholder-3.jpg'
-publishDate: 'Jul 08 2022'
+pubDate: 'Jul 08 2022'
 updateDate: 'Jul 08 2022'
 category: 'dumb'
 ---
