@@ -24,14 +24,13 @@ const posts: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort(
     <Header title={SITE_TITLE} />
       <main>
 
-        <div class="flex flex-row gap-0 ">
-
+        <div class="flex sm:flex-row gap-0 flex-col">
           <div class="basis-1/2">
             <h1 class="text-5xl leading-tight text-left">Bonjour and welcome to my humble blog :)</h1>
             <p>In this little space of the internet I will be sharing my knowledge and points of view on various topics that I am passionate about</p>
           </div>
-          <div class="basis-1/2 polygon-shape px-5 bg-gray-400">
-            <Image class="overflow-hidden" alt="anime girl holding an ipad" src="/images/home-hero.png" width={250} height={250}></Image>
+          <div class="basis-1/2 polygon-shape px-5 bg-gray-400 text-center">
+            <Image class="overflow-hidden mx-auto" alt="anime girl holding an ipad" src="/images/home-hero.png" width={250} height={250}></Image>
           </div>
         </div>
 
