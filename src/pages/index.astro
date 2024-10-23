@@ -9,9 +9,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { Image } from 'astro:assets';
 
 
+const postLimit = 5;
 const posts: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort(
 (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
+).slice(0,postLimit);
 
 ---
 

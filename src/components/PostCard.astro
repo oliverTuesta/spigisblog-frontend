@@ -16,7 +16,7 @@ import { Image } from 'astro:assets';
     {
     post.data.thumbnail && 
     <a href=`/blog/${post.slug}` arial-label={post.data.title}>
-      <Image class="object-cover rounded-md h-48" width={300} height={300} src={post.data.thumbnail} alt="" />
+      <Image class="object-cover rounded-md h-48" width={250} height={250} src={post.data.thumbnail} alt="" />
     </a>
     }
   </div>
@@ -31,9 +31,6 @@ import { Image } from 'astro:assets';
       <p>
       <FormattedDate date={post.data.pubDate}/>
       </p>
-      <a href=`/blog/${post.slug}` class="link">
-        <p class="font-semibold uppercase">{post.data.category}</p>
-      </a>
     </div>
   </div>
 </div>
