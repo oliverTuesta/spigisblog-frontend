@@ -1,5 +1,5 @@
 ---
-title: "My competitive programming jorney"
+title: "My competitive programming journey"
 slug: "cp-journey"
 summary: "Im finally pupil on codeforces"
 thumbnail: "/images/cp-journey/codeforces.png"
