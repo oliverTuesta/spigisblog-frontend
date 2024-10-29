@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import FormattedDate from '../components/FormattedDate.astro';
+
+interface Props {
+post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+
+import { Image } from 'astro:assets';
+---
+
+<div class="bg-transparent flex flex-row gap-5">
+  <div class="basis-1/3">
+    {
+    post.data.thumbnail && 
+    <a href=`/blog/${post.slug}` arial-label={post.data.title}>
+      <Image class="object-cover rounded-md h-48" width={250} height={250} src={post.data.thumbnail} alt="" />
+    </a>
+    }
+  </div>
+  <div class="basis-2/3 flex flex-col justify-between h-48">
+    <div class="flex flex-col">
+      <h3 class="card__title h3">
+        <a href=`/blog/${post.slug}` class="link">{post.data.title}</a>
+      </h3>
+      <p class="line-clamp-4 overflow-hidden">{post.data.summary}</p>
+    </div>
+    <div class="flex flex-row justify-between card__footer">  
+      <p>
+      <FormattedDate date={post.data.pubDate}/>
+      </p>
+    </div>
+  </div>
+</div>
