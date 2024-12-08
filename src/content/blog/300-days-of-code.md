@@ -22,4 +22,4 @@ I will be there no matter what.
 This week, my focus is on upsolving problems from past Codeforces rounds and revisiting the last ICPC contest I participated in.
 
 ### Day 1
-Today I solved 2 problems from the [Codeforces Round 992 (Div. 2)](https://codeforces.com/contests/2040). I also upsolved the remaining four problems from the contest.
+Today I solved 2 problems from the [Codeforces Round 992 (Div. 2)](https://codeforces.com/contests/2040). I also upsolved the third problem.
