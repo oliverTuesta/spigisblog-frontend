@@ -26,3 +26,6 @@ Today I solved 2 problems from the [Codeforces Round 992 (Div. 2)](https://codef
 
 ### Day 2
 Something that might seem obvios but difficult to consider when learning is that, like in the gym if you want your muscles to grow you have to make an effort pushing the limit of your body, for competitive programming you have to push your thinking to the point that it bothers you to keep trying. And that is what I did today, I was solving a problem and had an idea of how to solve it but it had a lot of details to consider, so I tried my best and in an hour I implement it. https://codeforces.com/problemset/problem/2037/E
+
+### Day 3
+Today I solved this problem: https://codeforces.com/contest/2034/problem/D
