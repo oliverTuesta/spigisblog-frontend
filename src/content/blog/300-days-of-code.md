@@ -29,3 +29,6 @@ Something that might seem obvios but difficult to consider when learning is that
 
 ### Day 3
 Today I solved this problem: https://codeforces.com/contest/2034/problem/D
+
+### Day 4
+Today I solved this problem: https://codeforces.com/problemset/problem/2045/C, it took me about 15 minutes to think the solution and other 20 to implement it
