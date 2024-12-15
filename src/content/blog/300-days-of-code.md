@@ -33,5 +33,8 @@ Today I solved this problem: https://codeforces.com/contest/2034/problem/D
 ### Day 4
 Today I solved this problem: https://codeforces.com/problemset/problem/2045/C, it took me about 15 minutes to think the solution and other 20 to implement it
 
-### Day 5
+### Day 5 and 6
+I am a shame
+
+### Day 7
 Today I solved this problem: https://codeforces.com/problemset/problem/2028/C, After trying for half an hour I had to look at the editorial and then I code it by myself.
