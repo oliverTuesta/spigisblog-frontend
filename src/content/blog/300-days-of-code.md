@@ -19,7 +19,7 @@ I will be there no matter what.
 ## Week 1 
 (2024-12-08 to 2024-12-14)
 
-This week, my focus is on upsolving problems from past Codeforces rounds and revisiting the last ICPC contest I participated in.
+This week, my focus is on solving 1400 - 1600 codeforces problems.
 
 ### Day 1
 Today I solved 2 problems from the [Codeforces Round 992 (Div. 2)](https://codeforces.com/contests/2040). I also upsolved the third problem.
@@ -38,3 +38,14 @@ I am a shame
 
 ### Day 7
 Today I solved this problem: https://codeforces.com/problemset/problem/2028/C, After trying for half an hour I had to look at the editorial and then I code it by myself.
+
+### Review
+I learned a lot this week mainly because I changed my approach for leaning, now I'm doing problems above my level. I realize that it takes me, for most 1600 rated problems, within 30 minutes and one hour to think in the solution. Ironically, I am exited because I have a lot of room for improvement and I feel confident that if I keep practicing sooner than later I will be solving 1600 rated problems in less than 30 minutes.
+
+## Week 2
+(2024-12-15 to 2024-12-21)
+
+I will keep solving 1600 rated problems
+
+### Day 8
+Today I participated in the [Codeforces Round 993 (Div. 4)](https://codeforces.com/contest/2044). I solved 6 problems in the contest and upsolved 1 afterwards. It had a lot of fun and I'm expecting to get to specalist with the results.
