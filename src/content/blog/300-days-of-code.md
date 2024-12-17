@@ -48,4 +48,7 @@ I learned a lot this week mainly because I changed my approach for leaning, now 
 I will keep solving 1600 rated problems
 
 ### Day 8
-Today I participated in the [Codeforces Round 993 (Div. 4)](https://codeforces.com/contest/2044). I solved 6 problems in the contest and upsolved 1 afterwards. It had a lot of fun and I'm expecting to get to specalist with the results.
+Today I participated in the [Codeforces Round 993 (Div. 4)](https://codeforces.com/contest/2044). I solved 6 problems in the contest and upsolved 1 afterwards. It had a lot of fun and I'm expecting to get to specialist with the results.
+
+### Day 9
+In the contest from yesterday I got hacked and I didn't get to Specialist :(. So, today I solved the problem that someone hacked me: [G1. Medium Demon Problem (easy version)](https://codeforces.com/contest/2044/problem/G1)
