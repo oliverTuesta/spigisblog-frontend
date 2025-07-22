@@ -15,7 +15,7 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <BaseHead title={title}/>
+  <BaseHead title={title} description={description} image={image}/>
 </head>
 <body class="">
 <Header />
