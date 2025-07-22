@@ -11,8 +11,8 @@ p {
   margin-bottom: 10px;
 }
 
-main {
-  max-width: 768px;
+body {
+  max-width: 800px;
   margin: 1em auto;
   padding: 0 20px;
 }
@@ -43,19 +43,19 @@ main {
   }
 
   button {
-    @apply bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-md;
+    @apply bg-primary hover:bg-blue-gray-600 text-white font-bold py-2 px-4 rounded-md;
   }
 
   .card {
-    @apply bg-gray-100 block p-6 rounded-lg;
+    @apply bg-blue-gray-500 block p-6 rounded-lg text-blue-gray-50;
   }
 
   .card-link {
-    @apply card hover:bg-gray-200;
+    @apply card hover:bg-blue-gray-600;
   }
 
   .card__p {
-    @apply font-normal;
+    @apply font-normal
   }
 
   .card__footer p {

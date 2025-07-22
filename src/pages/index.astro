@@ -1,5 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
+import MainLayout from '../layouts/MainLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import PostList from '../components/PostList.astro';
@@ -11,43 +12,34 @@ import { Image } from 'astro:assets';
 
 const postLimit = 5;
 const posts: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort(
-(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 ).slice(0,postLimit);
 
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header title={SITE_TITLE} />
-      <main>
+<MainLayout description="A blog about software competitive programming, engineering, books and more" title={SITE_TITLE}>
+  <main>
+    <div class="flex sm:flex-row gap-0 flex-col">
+      <div class="basis-1/2">
+        <h1 class="text-5xl leading-tight text-left">Bonjour and welcome to my humble blog :)</h1>
+        <p>In this little space of the internet I will be sharing my knowledge and points of view on various topics that I am passionate about</p>
+      </div>
+      <div class="basis-1/2 polygon-shape px-5 bg-white text-center">
+        <Image class="overflow-hidden mx-auto" alt="anime girl holding an ipad" src="/images/spigi.png" width={350} height={350}></Image>
+      </div>
+    </div>
 
-        <div class="flex sm:flex-row gap-0 flex-col">
-          <div class="basis-1/2">
-            <h1 class="text-5xl leading-tight text-left">Bonjour and welcome to my humble blog :)</h1>
-            <p>In this little space of the internet I will be sharing my knowledge and points of view on various topics that I am passionate about</p>
-          </div>
-          <div class="basis-1/2 polygon-shape px-5 bg-gray-400 text-center">
-            <Image class="overflow-hidden mx-auto" alt="anime girl holding an ipad" src="/images/home-hero.png" width={250} height={250}></Image>
-          </div>
-        </div>
-
-
-        <a href="/about" class="card-link my-14 mx-6">
-
-          <h2 class="card__title">Hi, I'm spigi</h2>
-          <p class="card__p">I'm a software engineer from Peru with a passion for art, gaming, books and of course technology.
-          </p>
-        </a>
-        <PostList title="Recent posts" posts={posts}/>
-      </main>
-      <Footer />
-  </body>
-</html>
-
+    <a href="/about" class="card-link my-14 mx-6">
+      <h2 class="card__title">Hi, I'm spigi</h2>
+      <p class="card__p">
+        I'm an artis, teacher and software engineer from Peru.
+        <br>
+        I love mangas, gaming, programming and reading about science, technology, philosophy and history.
+      </p>
+    </a>
+    <PostList title="Recent posts" posts={posts}/>
+  </main>
+</MainLayout>
 <style>
   .polygon-shape {
     clip-path: polygon(4% 11%, 87% 0, 100% 54%, 70% 100%, 16% 94%, 0% 50%);
