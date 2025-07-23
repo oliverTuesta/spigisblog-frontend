@@ -3,4 +3,4 @@
 
 export const SITE_TITLE = "Spigis blog";
 export const SITE_DESCRIPTION =
-  "A blog about web gaming, books, and technology.";
+  "A blog about web gaming, books, and technology by Oliver Tuesta (spigi)";

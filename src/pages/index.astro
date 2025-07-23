@@ -17,7 +17,7 @@ const posts: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort(
 
 ---
 
-<MainLayout description="A blog about software competitive programming, engineering, books and more" title={SITE_TITLE}>
+<MainLayout description={SITE_DESCRIPTION} title={SITE_TITLE}>
   <main>
     <div class="flex sm:flex-row gap-0 flex-col">
       <div class="basis-1/2">

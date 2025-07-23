@@ -2,30 +2,19 @@
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import MainLayout from '../../layouts/MainLayout.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import PostList from '../../components/PostList.astro';
 
 const posts: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort(
-(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<section>
-      <h1 class="mb-10">All posts</h1>
-        <PostList posts={posts}>
-			</section>
-		</main>
-		<Footer />
-	</body>
-</html>
+<MainLayout description={SITE_DESCRIPTION} title={SITE_TITLE}>
+  <h1 class="mb-10">All posts</h1>
+  <PostList posts={posts}>
+</MainLayout>
