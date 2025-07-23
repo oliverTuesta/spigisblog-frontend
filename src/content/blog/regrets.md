@@ -11,7 +11,7 @@ category: "thinking-out-loud"
 
 A friend once asked me if I have any regrets. When I thought about it, I was focused on how happy I was in that moment and realized that if something had been different, I probably wouldn't be in this place. I'm not saying that my life was perfect or anything like that; I'm just saying that if my crush hadn't rejected me or if the recruiter for that job I wanted hadn't ghosted me, I probably wouldn't be who I am today. It's like in the movie _The Flash_ when Barry tells Batman that he can go back to the past and fix everything, even save his parents. Batman responds, "Those scars we have make us who we are," and "Don't live in your past, live your life."
 
-> ![Alt text](/images/regrets/drawings.png)
+![4 character drawings](/images/regrets/drawings.png)
 
 ## Wasted potential
 
