@@ -8,69 +8,71 @@ import { Image } from 'astro:assets';
 ---
 
 <Layout
-title="About Me"
-summary="Who is spigi?"
-pubDate={new Date('March 07 2024')}
-hero="/images/about-hero.png"
+  title="About Me"
+  summary="Oliver Tuesta, also know as Spigi, is a software engineer and artist from Peru. He is passionate about programming, art, and sharing knowledge"
+  pubDate={new Date('Jul 25 2025')}
+  hero="/images/about-hero.png"
 >
 
-<section class="my-10">
-  <div class="flex sm:flex-row flex-col gap-5 mx-auto w-min">
-    <div class="mx-auto min-w-40 max-w-40 min-h-40 max-h-40 border-primary border-4 rounded-full overflow-hidden">
-      <Image style="margin: 0;" alt="spigi profile picture" src="/images/oli.png" width={200} height={200}></Image>
-    </div>
-    <div class="sm:w-full mx-auto">
-      <div>
-        <h3 class="mb-2">Spigi</h3>
-        <p>Developer and artist with big dreams</p>
+  <section class="my-10">
+    <div class="flex sm:flex-row flex-col gap-5 mx-auto w-min">
+      <div class="mx-auto min-w-40 max-w-40 min-h-40 max-h-40 border-primary border-4 rounded-full overflow-hidden">
+        <Image style="margin: 0;" alt="Oliver Tuesta also know as Spigi" src="/images/oli.png" width={200} height={200}></Image>
       </div>
+      <div class="sm:w-full mx-auto">
+        <div>
+          <h3 class="mb-2">Spigi</h3>
+          <p>Developer and artist with big dreams</p>
+        </div>
 
-      <div class="flex gap-4 w-min my-5 justify-center mx-auto sm:mx-0">  
-        <a href="https://olivertuesta-homepage.vercel.app/works" target="_blank">
-          <button class="flex items-center gap-2">
-            <FaExternalLinkSquareAlt/>
-            Portfolio
-          </button>
-        </a>
-        <a href="mailto:oliver.jtuesta@gmail.com">
-          <button class="flex items-center gap-2">
-            <IoMailSharp/>
-            Contact
-          </button>
-        </a>
+        <div class="flex gap-4 w-min my-5 justify-center mx-auto sm:mx-0">
+          <a href="https://olivertuesta-homepage.vercel.app/works" target="_blank">
+            <button class="flex items-center gap-2">
+              <FaExternalLinkSquareAlt/>
+              Portfolio
+            </button>
+          </a>
+          <a href="mailto:oliver.jtuesta@gmail.com">
+            <button class="flex items-center gap-2">
+              <IoMailSharp/>
+              Contact
+            </button>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section>
-  <p>Spigi is a software engineering from Peru with a passion for computers and art. He enjoys using his coding skills to solve problems and is always looking for ways to improve his abilities. When not in front of a computer, Oliver enjoys reading books, going to the gym, competitive programming, and drawing. He is driven and dedicated to his studies and is eager to put his skills to use in the field of software engineering.</p>
-</section>
+  I'm Oliver Tuesta, also known as Spigi. I am on my last year of university, where I am pursuing a degree in
+  Software Engineering. My current goal is to represent my country on the ICPC, the most important competitive
+  programming contest in the world. Also, I am drawing every day to build a habit and improve my skills as an artist.
+  Besides that, I will be creating content regularly on my YouTube channel and this blog, where I will be sharing
+  my knowledge and experiences in programming, art, and other topics that I am passionate about.
 
-<section>
-  <h2>Social links</h2>
-  <div class="flex gap-5 mx-auto max-w-min">
-    <a href="https://www.github.com/oliverTuesta" target="_blank" class="flex items-center gap-1 no-underline line-through">
-      <span class="sr-only">Go to my GitHub repo</span>
-      <FaGithubAlt />
-      Github
-    </a>
+  <section>
+    <h2>Social links</h2>
+    <div class="flex gap-5 mx-auto max-w-min">
+      <a href="https://www.github.com/oliverTuesta" target="_blank" class="flex items-center gap-1 no-underline line-through">
+        <span class="sr-only">Go to my GitHub repo</span>
+        <FaGithubAlt />
+        Github
+      </a>
 
-    <a href="https://www.twitter.com/@spigiis" target="_blank" class="flex items-center gap-1">
-      <span class="sr-only">Go to my twitter</span>
-      <FaXTwitter />
-      @spigiis
-    </a>
+      <a href="https://www.twitter.com/@spigiis" target="_blank" class="flex items-center gap-1">
+        <span class="sr-only">Go to my twitter</span>
+        <FaXTwitter />
+        @spigiis
+      </a>
 
-    <a href="https://www.youtube.com/@spigiz" target="_blank" class="flex items-center gap-1">
-      <span class="sr-only">Go to my youtube chanel</span>
-      <FaYoutube />
-      @spigiz
-    </a>
+      <a href="https://www.youtube.com/@spigiz" target="_blank" class="flex items-center gap-1">
+        <span class="sr-only">Go to my youtube chanel</span>
+        <FaYoutube />
+        @spigiz
+      </a>
 
-  </div>
+    </div>
 
-</section>
+  </section>
 
 
 </Layout>
