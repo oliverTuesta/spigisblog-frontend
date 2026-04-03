@@ -1,0 +1,24 @@
+---
+import Card from "../components/GameCard.astro";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  title?: string;
+  posts: CollectionEntry<"games">[];
+}
+
+const { posts, title } = Astro.props;
+---
+
+{title && <h2 class="h2 first-letter:uppercase">{title}</h2>}
+
+<div class="flex flex-col gap-5">
+  {
+    posts.map((post) => (
+      <div>
+        <hr />
+        <Card post={post} />
+      </div>
+    ))
+  }
+</div>

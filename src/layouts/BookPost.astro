@@ -1,0 +1,56 @@
+---
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
+import { Image } from "astro:assets";
+import MainLayout from "./MainLayout.astro";
+import "../styles/markdown.css";
+
+type Props = CollectionEntry<"books">["data"];
+
+const { title, summary, pubDate, updatedDate, hero, author } = Astro.props;
+---
+
+<MainLayout description={summary} title={title} image={hero}>
+  <div>
+    {
+      hero && (
+        <Image
+          class="h-72 object-cover"
+          width={768}
+          height={288}
+          src={hero}
+          alt=""
+        />
+      )
+    }
+  </div>
+  <h1 class="my-8">{title}</h1>
+  <div class="prose">
+    <div class="">
+      <div class="">
+        {
+          author && (
+            <p>
+              Author: <span class="font-semibold">{author}</span>
+            </p>
+          )
+        }
+        <p class="font-semibold text-gray-500 mb-0">
+          <FormattedDate date={pubDate} />
+        </p>
+
+        {
+          updatedDate && (
+            <div class="">
+              Last updated on <FormattedDate date={updatedDate} />
+            </div>
+          )
+        }
+      </div>
+      <hr class="mb-8" />
+    </div>
+    <article class="markdown">
+      <slot />
+    </article>
+  </div>
+</MainLayout>

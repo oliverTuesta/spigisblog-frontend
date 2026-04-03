@@ -3,14 +3,14 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
-import PostList from "../../components/PostList.astro";
+import GameList from "../../components/GameList.astro";
 
-const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
+const games: CollectionEntry<"games">[] = (await getCollection("games")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
 <MainLayout description={SITE_DESCRIPTION} title={SITE_TITLE}>
-  <h1 class="mb-10">All posts</h1>
-  <PostList posts={posts} />
+  <h1 class="mb-10">Games</h1>
+  <GameList posts={games} />
 </MainLayout>
