@@ -5,14 +5,14 @@ summary: "Unforgettable characters, deep emotions, and a richly immersive world"
 thumbnail: "/images/books/the-way-of-kings/cover.png"
 hero: "/images/books/the-way-of-kings/hero.png"
 pubDate: "Apr 03 2026"
-updateDate: "Apr 03 2026"
+updateDate: "Apr 04 2026"
 author: "Brandon Sanderson"
 category: "fantasy"
 ---
 
 This is an amazing book with incredible characters and a description of the world that is so vivid that it’s impossible for the reader not to feel immersed. It’s the first book in The Stormlight Archive series, the most ambitious project from Brandon Sanderson. At the moment I’m writing this, it has four incredible books, each more than a thousand pages long. I loved each of these books so much that it doesn’t feel like they are that long.
 
-My favorite character from these books is Shallan. Every chapter of hers is so fun, I even take notes of her jokes.
+My favorite character from these books is Shallan. Every chapter of hers is so fun that I even take notes on her jokes.
 
 On the other hand, Kaladin’s story is so sad that it’s impossible not to understand his hatred for the lighteyes.
 
