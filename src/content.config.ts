@@ -1,14 +1,13 @@
 import { defineCollection, z } from "astro:content";
+import { glob } from "astro/loaders";
 
 const blog = defineCollection({
-  type: "content",
-  // Type-check frontmatter using a schema
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/blog" }),
   schema: z.object({
     title: z.string(),
     summary: z.string(),
     thumbnail: z.string().optional(),
     hero: z.string().optional(),
-    // Transform string to Date object
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     category: z.string().optional(),
@@ -16,13 +15,12 @@ const blog = defineCollection({
 });
 
 const books = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/books" }),
   schema: z.object({
     title: z.string(),
     summary: z.string(),
     thumbnail: z.string().optional(),
     hero: z.string().optional(),
-    // Transform string to Date object
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     category: z.string().optional(),
@@ -31,13 +29,12 @@ const books = defineCollection({
 });
 
 const games = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/games" }),
   schema: z.object({
     title: z.string(),
     summary: z.string(),
     thumbnail: z.string().optional(),
     hero: z.string().optional(),
-    // Transform string to Date object
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     category: z.string().optional(),

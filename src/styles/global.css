@@ -1,25 +1,40 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-body {
-  font-family: "Poppins", sans-serif;
+@theme {
+  --color-primary: #5b7196;
+
+  --color-blue-gray-50: #f5f7fa;
+  --color-blue-gray-100: #e4e9f0;
+  --color-blue-gray-200: #cbd6e2;
+  --color-blue-gray-300: #aab8cc;
+  --color-blue-gray-400: #889bb5;
+  --color-blue-gray-500: #5b7196;
+  --color-blue-gray-600: #4d5f7d;
+  --color-blue-gray-700: #404e66;
+  --color-blue-gray-800: #2c3749;
+  --color-blue-gray-900: #282f3c;
 }
 
-p {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
+@layer base {
 
-body {
-  max-width: 800px;
-  margin: 1em auto;
-  padding: 0 20px;
-}
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
 
-@layer components {
-  .title {
-    @apply font-bold tracking-tight;
+  body {
+    font-family: 'Poppins', sans-serif;
+    max-width: 800px;
+    margin: 1em auto;
+    padding: 0 20px;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 10px;
   }
 
   h1 {
@@ -35,7 +50,7 @@ body {
   }
 
   hr {
-    @apply block border border-gray-200 mb-4;
+    @apply border border-gray-200 mb-4;
   }
 
   section {
@@ -45,24 +60,30 @@ body {
   button {
     @apply bg-primary hover:bg-blue-gray-600 text-white font-bold py-2 px-4 rounded-md;
   }
+}
 
-  .card {
-    @apply bg-blue-gray-500 block p-6 rounded-lg text-blue-gray-50;
-  }
+@utility title {
+  @apply font-bold tracking-tight;
+}
 
-  .card-link {
-    @apply card hover:bg-blue-gray-600;
-  }
+@utility card {
+  @apply bg-blue-gray-500 block p-6 rounded-lg text-blue-gray-50;
+}
 
-  .card__p {
-    @apply font-normal
-  }
+@utility card-link {
+  @apply card hover:bg-blue-gray-600;
+}
 
-  .card__footer p {
+@utility card__p {
+  @apply font-normal;
+}
+
+@utility card__footer {
+  & p {
     @apply mt-4 text-sm text-gray-600;
   }
+}
 
-  .link {
-    @apply hover:underline;
-  }
+@utility link {
+  @apply hover:underline;
 }
