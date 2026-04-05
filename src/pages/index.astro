@@ -1,31 +1,44 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import MainLayout from '../layouts/MainLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import PostList from '../components/PostList.astro';
-import type { CollectionEntry } from 'astro:content';
-import { getCollection } from 'astro:content';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import { Image } from 'astro:assets';
+import BaseHead from "../components/BaseHead.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import PostList from "../components/PostList.astro";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { Image } from "astro:assets";
+import BooksList from "../components/BooksList.astro";
 
-
-const postLimit = 5;
-const posts: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-).slice(0,postLimit);
-
+const postLimit = 3;
+const recentPosts: CollectionEntry<"blog">[] = (await getCollection("blog"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, postLimit);
+const recentBooks: CollectionEntry<"books">[] = (await getCollection("books"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, postLimit);
 ---
 
 <MainLayout description={SITE_DESCRIPTION} title={SITE_TITLE}>
   <main>
     <div class="flex sm:flex-row gap-0 flex-col">
       <div class="basis-1/2">
-        <h1 class="text-5xl leading-tight text-left">Bonjour and welcome to my humble blog :)</h1>
-        <p>In this little space of the internet I will be sharing my knowledge and points of view on various topics that I am passionate about</p>
+        <h1 class="text-5xl leading-tight text-left">
+          Bonjour and welcome to my humble blog :)
+        </h1>
+        <p>
+          In this little space of the internet I will be sharing my knowledge
+          and points of view on various topics that I am passionate about
+        </p>
       </div>
       <div class="basis-1/2 polygon-shape px-5 bg-white text-center">
-        <Image class="overflow-hidden mx-auto" alt="anime girl holding an ipad" src="/images/spigi.png" width={350} height={350}></Image>
+        <Image
+          class="overflow-hidden mx-auto"
+          alt="anime girl holding an ipad"
+          src="/images/spigi.png"
+          width={350}
+          height={350}
+        />
       </div>
     </div>
 
@@ -33,15 +46,19 @@ const posts: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort(
       <h2 class="card__title">Hi, I'm spigi</h2>
       <p class="card__p">
         I'm an artist, teacher and software engineer from Peru.
-        <br>
-        I love mangas, gaming, programming and reading about science, technology, philosophy and history.
+        <br />
+        I love mangas, gaming, programming and reading about science, technology,
+        philosophy and history.
       </p>
     </a>
-    <PostList title="Recent posts" posts={posts}/>
+    <PostList title="Recent posts" posts={recentPosts} />
+    <div class="my-14 mx-6"></div>
+
+    <BooksList title="Recent books" posts={recentBooks} />
   </main>
+  <style>
+    .polygon-shape {
+      clip-path: polygon(4% 11%, 87% 0, 100% 54%, 70% 100%, 16% 94%, 0% 50%);
+    }
+  </style>
 </MainLayout>
-<style>
-  .polygon-shape {
-    clip-path: polygon(4% 11%, 87% 0, 100% 54%, 70% 100%, 16% 94%, 0% 50%);
-  }
-</style>
