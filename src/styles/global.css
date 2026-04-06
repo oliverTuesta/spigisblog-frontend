@@ -2,6 +2,12 @@
 
 @theme {
   --color-primary: #5b7196;
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-popover: hsl(var(--popover));
+  --color-border: hsl(var(--border));
+  --color-muted: hsl(var(--muted));
 
   --color-blue-gray-50: #f5f7fa;
   --color-blue-gray-100: #e4e9f0;
@@ -13,6 +19,17 @@
   --color-blue-gray-700: #404e66;
   --color-blue-gray-800: #2c3749;
   --color-blue-gray-900: #282f3c;
+}
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
+
+  --card: 0 0% 100%;
+  --popover: 0 0% 100%;
+
+  --border: 214 32% 91%;
+  --muted: 218 24% 39%;
 }
 
 @layer base {
