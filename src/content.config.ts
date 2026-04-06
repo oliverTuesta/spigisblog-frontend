@@ -38,7 +38,7 @@ const games = defineCollection({
     hero: z.string().optional(),
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
-    category: z.string().optional(),
+    categories: z.array(z.string()).optional(),
   }),
 });
 

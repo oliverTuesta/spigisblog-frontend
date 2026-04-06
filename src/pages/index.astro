@@ -6,12 +6,16 @@ import { getCollection } from "astro:content";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { Image } from "astro:assets";
 import BooksList from "../components/BooksList.astro";
+import GameList from "@/components/GameList.astro";
 
 const postLimit = 3;
 const recentPosts: CollectionEntry<"blog">[] = (await getCollection("blog"))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, postLimit);
 const recentBooks: CollectionEntry<"books">[] = (await getCollection("books"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, postLimit);
+const recentGames: CollectionEntry<"games">[] = (await getCollection("games"))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, postLimit);
 ---
@@ -50,8 +54,9 @@ const recentBooks: CollectionEntry<"books">[] = (await getCollection("books"))
     </a>
     <PostList title="Recent posts" posts={recentPosts} />
     <div class="my-14 mx-6"></div>
-
     <BooksList title="Recent books" posts={recentBooks} />
+    <div class="my-14 mx-6"></div>
+    <GameList title="Recent games" posts={recentGames} />
   </main>
   <style>
     .polygon-shape {
